@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		223E99E825D9C27B005CF053 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E99E725D9C27B005CF053 /* main.swift */; };
+		223E99F025D9C28A005CF053 /* Cropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E99EF25D9C28A005CF053 /* Cropper.swift */; };
+		223E99F325D9C307005CF053 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E99F225D9C307005CF053 /* FileIO.swift */; };
+		223E99F625D9C3E4005CF053 /* FileDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E99F525D9C3E4005CF053 /* FileDialog.swift */; };
+		22B1701825D9D03700D92BEC /* ProcessImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1701725D9D03700D92BEC /* ProcessImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		223E99E425D9C27B005CF053 /* FaceCropper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FaceCropper; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E99E725D9C27B005CF053 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		223E99EF25D9C28A005CF053 /* Cropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cropper.swift; sourceTree = "<group>"; };
+		223E99F225D9C307005CF053 /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
+		223E99F525D9C3E4005CF053 /* FileDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDialog.swift; sourceTree = "<group>"; };
+		22B1701725D9D03700D92BEC /* ProcessImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				223E99E725D9C27B005CF053 /* main.swift */,
+				223E99EF25D9C28A005CF053 /* Cropper.swift */,
+				223E99F225D9C307005CF053 /* FileIO.swift */,
+				223E99F525D9C3E4005CF053 /* FileDialog.swift */,
+				22B1701725D9D03700D92BEC /* ProcessImage.swift */,
 			);
 			path = FaceCropper;
 			sourceTree = "<group>";
@@ -120,6 +132,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				223E99E825D9C27B005CF053 /* main.swift in Sources */,
+				223E99F025D9C28A005CF053 /* Cropper.swift in Sources */,
+				22B1701825D9D03700D92BEC /* ProcessImage.swift in Sources */,
+				223E99F325D9C307005CF053 /* FileIO.swift in Sources */,
+				223E99F625D9C3E4005CF053 /* FileDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
