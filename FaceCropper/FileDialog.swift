@@ -7,6 +7,9 @@
 
 import Cocoa
 
+/// Helper function to display a file dialog prompt and pick a folder
+/// - Parameter prompt: Title for fileDialog. As of MacOS Big Sur, I could not determine if this changed anything
+/// - Returns: URL to selected folder if one was selected. Otherwise returns nil.
 func FileDialog(prompt: String = "Choose a folder") -> URL? {
     let dialog = NSOpenPanel();
 

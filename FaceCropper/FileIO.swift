@@ -7,12 +7,10 @@
 
 import Cocoa
 
-func getURL(name: String, fileExtension: String) -> URL {
-    let documentDirectoryURL = try! FileManager.default.url(for: .desktopDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-    let fileURL = documentDirectoryURL.appendingPathComponent(name).appendingPathExtension(fileExtension)
-    return fileURL
-}
-
+/// Driver function to save data to url, otherwise prints out error
+/// - Parameters:
+///   - data: data to save
+///   - url: url to save data at
 func saveData(data: Data, url: URL) {
     do {
         try data.write(to: url)
@@ -21,6 +19,9 @@ func saveData(data: Data, url: URL) {
     }
 }
 
+/// Driver function to read data from URL, otherwise prints error.
+/// - Parameter url: URL to read from
+/// - Returns: data if any was found at URL provided. Otherwise nil.
 func readData(url: URL) -> Data? {
     do {
         let data = try Data(contentsOf: url)
@@ -32,6 +33,9 @@ func readData(url: URL) -> Data? {
     return nil
 }
 
+/// Driver functino to automatically convert data read from a file to an image
+/// - Parameter url: URL to read from
+/// - Returns: an image if data could be found and converted to an image
 func getImage(url: URL) -> NSImage? {
     do {
         if let data = readData(url: url) {
@@ -44,12 +48,20 @@ func getImage(url: URL) -> NSImage? {
     }
 }
 
+/// Driver function to automatically convert image to data and save it to a file
+/// - Parameters:
+///   - image: NSImage to save
+///   - url: URL to save image to
 func saveImage(image: NSImage, url: URL) {
     if let data = image.tiffRepresentation {
         saveData(data: data, url: url)
     }
 }
 
+/// Helper function to convert CGImage to NSImage and subsequently save to given URL
+/// - Parameters:
+///   - image: image to save as CGImage
+///   - url: URL to save image to
 func saveImage(image: CGImage, url: URL) {
     let nsImage = NSImage(cgImage: image, size: .zero)
     saveImage(image: nsImage, url: url)
